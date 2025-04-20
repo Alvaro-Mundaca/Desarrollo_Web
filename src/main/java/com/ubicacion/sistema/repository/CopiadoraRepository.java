@@ -53,6 +53,7 @@ public class CopiadoraRepository {
     public ResponseEntity<?> ActualizarParcialmente(Long id, Copiadora parcial) {
         for (Copiadora copiadora: ListaCopiadoras){
             if (copiadora.getId().equals(id)) {
+                if (parcial.getMarca() != null) copiadora.setMarca(parcial.getMarca());
                 if (parcial.getModelo() != null) copiadora.setModelo(parcial.getModelo());
                 if (parcial.getTipo() != null) copiadora.setTipo(parcial.getTipo());
                 if (parcial.getEstado() != null) copiadora.setEstado(parcial.getEstado());
