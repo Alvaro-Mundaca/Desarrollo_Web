@@ -57,7 +57,8 @@ public class ClienteRepository {
                 if (parcial.getTelefono() != null) cliente.setTelefono(parcial.getTelefono());
                 if (parcial.getRazonSocial() != null) cliente.setRazonSocial(parcial.getRazonSocial());
                 if (parcial.getRuc() != null) cliente.setRuc(parcial.getRuc());
-                if (parcial.getEstado() != null) cliente.setEstado(parcial.getEstado());
+                if (parcial.getEstado() != null) cliente.setEstado(parcial.getEstado());           
+                if (parcial.getEmail() != null) cliente.setEmail(parcial.getEmail());
                 return ResponseEntity.ok("Cliente ACTUALIZADO PARCIALMENTE con ID: " + id);
             }
         }

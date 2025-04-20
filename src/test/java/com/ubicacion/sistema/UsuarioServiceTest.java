@@ -17,16 +17,17 @@ class UsuarioServiceTest {
         UsuarioService service = new UsuarioService(repo);
 
         Usuario nuevo = new Usuario(
-            "admin",
-            "******",
-            "Calle Test 123",
             null,
             "Tulio",
             "Triviño",
             "87654321",
             "987654321",
-            "activo"
-        );
+            "Tulio2025@gmail.com",
+            "activo",
+            "admin",
+            "******",
+            "Calle Test 123"
+            );
 
         Usuario resultado = service.CrearUsuario(nuevo);
 

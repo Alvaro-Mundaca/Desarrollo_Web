@@ -7,13 +7,16 @@ public class Usuario extends Persona{
     private String clave;
     private String direccion;
 
-    public Usuario(String tipo, String clave, String direccion, Long id, String nombres, String apellidos, String dni, String telefono, String estado) {
-        super(id, nombres, apellidos, dni, telefono, estado);
+
+    public Usuario(Long id, String nombres, String apellidos, String dni, String telefono, String email, String estado,
+            String tipo, String clave, String direccion) {
+        super(id, nombres, apellidos, dni, telefono, email, estado);
         this.tipo = tipo;
         this.clave = clave;
         this.direccion = direccion;
     }
 
+    
     public String getTipo() {
         return tipo;
     }

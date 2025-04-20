@@ -20,15 +20,16 @@ class ClienteServiceTest {
 
         
         Cliente nuevo = new Cliente(
-            "Una Empresa S.A.C.",       
-            "20123456789",            
-            null,                     
-            "Diego",                   
-            "Maradona",                 
-            "87654321",              
-            "987654321",             
-            "INACTIVO"                  
-        );
+            null, 
+            "Diego", 
+            "Maradona", 
+            "87654321", 
+            "987654321", 
+            "notiene@gmail.com", 
+            "INACTIVO", 
+            "Una Empresa S.A.C.", 
+            "20123456789"
+            );
 
         
         Cliente resultado = service.CrearCliente(nuevo);
@@ -41,6 +42,7 @@ class ClienteServiceTest {
         assertEquals("INACTIVO", resultado.getEstado());
         assertEquals("Una Empresa S.A.C.", resultado.getRazonSocial());
         assertEquals("20123456789", resultado.getRuc());
+        assertEquals("notiene@gmail.com", resultado.getEmail());
 
         List<Cliente> ListaClientes = service.ObtenerClientes();
         assertEquals(1, ListaClientes.size(), "Debe haber un solo cliente en el repo");

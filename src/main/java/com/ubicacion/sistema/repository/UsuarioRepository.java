@@ -62,6 +62,7 @@ public class UsuarioRepository {
                 if (parcial.getDireccion() != null) usuario.setDireccion(parcial.getDireccion());
                 if (parcial.getClave() != null) usuario.setClave(parcial.getClave());
                 if (parcial.getEstado() != null) usuario.setEstado(parcial.getEstado());
+                if (parcial.getEmail() != null) usuario.setEmail(parcial.getEmail());
                 return ResponseEntity.ok("Usuario ACTUALIZADO PARCIALMENTE con ID: " + id);
             }
         }
